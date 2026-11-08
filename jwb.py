@@ -7,7 +7,7 @@ st.write("Envie seu arquivo com as colunas necessárias para realizar o cálculo
 arquivo_enviado = st.file_uploader("Faça o upload do seu arquivo CSV", type=["csv"])
 
 if arquivo_enviado is not None:
-    df_jwb_vendas = pd.read_csv(arquivo_enviado)
+    df_jwb_vendas = pd.read_csv(arquivo_enviado, sep=';')
     st.write("Dados originais:")
     st.dataframe(df_jwb_vendas.head())
 
